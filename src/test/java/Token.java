@@ -12,6 +12,7 @@ public class Token {
                 .post("http://coop.apps.symfonycasts.com/token");
 
        String token=response.jsonPath().get("access_token");
+        System.out.println(token);
         return token;
     }
 }
