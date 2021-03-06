@@ -5,6 +5,8 @@ import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Test;
 
+import java.net.URL;
+
 public class RestRequest {
 
     @Test
@@ -18,6 +20,7 @@ public class RestRequest {
         Response response=request.request(Method.POST,"users");
         ResponseBody responseBody=response.getBody();
         System.out.println(responseBody.asString());
+        System.out.println(response.getHeaders());
         System.out.println(response.getStatusCode());
 
     }
